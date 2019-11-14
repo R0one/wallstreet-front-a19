@@ -1,6 +1,6 @@
 # wallstreet-front-a19
 Front de la perm Wallstreet A19.
-
+Ca va etre louuuuurd.
 ## Backend
 [https://github.com/cesar-richard/wallstreet](cesar-richard/wallstreet)
 
