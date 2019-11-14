@@ -12,7 +12,7 @@ constructor(props) {
 	this.state = { blue: false };
 }
 
-:
+
 
 render() {
 if (this.state.blue) {
