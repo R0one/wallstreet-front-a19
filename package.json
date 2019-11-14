@@ -1,0 +1,25 @@
+{
+  "name": "wallstreet-front-a19",
+  "version": "0.0.1",
+  "description": "Front de la perm Wallstreet A19.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CdRom1/wallstreet-front-a19.git"
+  },
+  "author": "Romain MALIACH-AUGUSTE, Victor TONDOLO, César RICHARD",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/CdRom1/wallstreet-front-a19/issues"
+  },
+  "homepage": "https://github.com/CdRom1/wallstreet-front-a19#readme",
+  "devDependencies": {
+    "@babel/preset-react": "^7.7.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.2"
+  }
+}
