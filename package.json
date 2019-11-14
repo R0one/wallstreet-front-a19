@@ -4,7 +4,7 @@
   "description": "Front de la perm Wallstreet A19.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/CdRom1/wallstreet-front-a19#readme",
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
     "@babel/preset-react": "^7.7.0"
   },
-  "dependencies": {
-    "@babel/core": "^7.7.2"
-  }
+  "dependencies": {}
 }
