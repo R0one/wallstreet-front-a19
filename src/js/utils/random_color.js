@@ -1,4 +1,4 @@
-export function getRandomColor() {
+function genRandomColor() {
 	var letters = '0123456789ABCDEF';
 	var color = '#';
 	for (var i = 0; i < 6; i++) {
@@ -6,3 +6,5 @@ export function getRandomColor() {
 	}
 	return color;
 }
+
+export { genRandomColor };

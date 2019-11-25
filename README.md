@@ -16,3 +16,7 @@ npm installs some JS and binary modules into `node_modules`.
 npm run build
 ```
 The code inside `src/` is compiled and put into `lib`. It can then be served on the international world wide web of earth.
+```
+npm run serve
+```
+This runs a very simple web server in user space, it is absolutely necessary because CORS does not authorize loading modules from file:///

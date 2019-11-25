@@ -1,6 +1,5 @@
 'use strict';
-import { random_color } from './utils/random_color';
-const e = React.createElement;
+import { genRandomColor } from './utils/random_color.js';
 const styleBleu = {
 	color: 'white',
 	backgroundColor: 'blue',
@@ -29,4 +28,4 @@ else {
 }
 
 const mainDiv = document.querySelector('#main-div');
-ReactDOM.render(MainScreen, domContainer);
+ReactDOM.render(MainScreen, mainDiv);
