@@ -1,5 +1,7 @@
 'use strict';
 import { genRandomColor } from './utils/random_color.js';
+import {TextWithBackground} from './components/textWithBackground.js';
+import {PrixArticle} from './components/texts.js';
 const styleBleu = {
 	color: 'white',
 	backgroundColor: 'blue',
@@ -11,22 +13,27 @@ constructor(props) {
 	this.state = { blue: false };
 }
 
+clickMeButtonClicked() {
+	console.log("test");
+	this.setState((state, props) => {
+		return {blue : 1-state.blue};
+	});	
+}
 
 
 render() {
-if (this.state.blue) {
-	const element = <h1>Hello, world</h1>;
-	return <div style={styleBleu}>BLEU</div>;
-}
-else {
-	let style = Object.assign({}, styleBleu);
-	style.backgroundColor = genRandomColor();
-	return <div style={style}>PAS BLEU</div>;
-}
-
+	return <div>
+		<TextWithBackground text={this.state.blue ? "bleu" : "pas bleu"} backgroundColor={this.state.blue ? "blue" : genRandomColor()} />
+		<button type="button" onClick={() => {
+			this.clickMeButtonClicked();
+		}}>Click Me!</button>
+		<PrixArticle prix={5} />
+		</div>;
 }
 
 }
+
+
 
 const mainDiv = document.querySelector('#main-div');
 const element = <MainScreen />;
