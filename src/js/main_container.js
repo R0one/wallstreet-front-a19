@@ -15,12 +15,13 @@ constructor(props) {
 
 render() {
 if (this.state.blue) {
-	return (<div style={styleBleu}>BLEU</div>);
+	const element = <h1>Hello, world</h1>;
+	return <div style={styleBleu}>BLEU</div>;
 }
 else {
 	let style = Object.assign({}, styleBleu);
-	style.backgroundColor = random_color();
-	return (<div style={style}>PAS BLEU</div>);
+	style.backgroundColor = genRandomColor();
+	return <div style={style}>PAS BLEU</div>;
 }
 
 }
@@ -28,4 +29,7 @@ else {
 }
 
 const mainDiv = document.querySelector('#main-div');
-ReactDOM.render(MainScreen, mainDiv);
+const element = <MainScreen />;
+ReactDOM.render(element, mainDiv);
+
+
