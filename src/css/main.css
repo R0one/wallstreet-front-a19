@@ -1,0 +1,19 @@
+:root {
+	--price-green: #42ff33;
+	--price-red: #ff4633;
+	--price-white: #fbfbfb;
+}
+body {
+	font-family: sans-serif;
+}
+.article {
+	font-size: 2em;
+	font-variant: small-caps;
+}
+.articleName {
+
+}
+.articlePrice {
+
+}
+

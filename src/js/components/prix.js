@@ -1,11 +1,12 @@
+//refer to variables managed by external css
 const textGreen  = {
-	color: 'green',
+	color: 'var(--price-green)',
 };
 const textRed  = {
-	color: 'red',
+	color: 'var(--price-red)',
 };
 const textWhite  = {
-	color: 'white',
+	color: 'var(--price-white)',
 };
 
 class Prix extends React.Component {
@@ -26,7 +27,7 @@ getColorFromEvolution(evolution){
 
 render(){
 	return(
-		<div>{this.props.nom} : <span style={this.getColorFromEvolution(this.state.evolution)}>{this.props.prix}</span></div>);
+		<div className="article"><span className="articleName">{this.props.nom} : </span><span className="articlePrice" style={this.getColorFromEvolution(this.state.evolution)}>{this.props.prix}</span></div>);
 }
 
 
