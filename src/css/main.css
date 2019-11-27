@@ -1,7 +1,7 @@
 :root {
-	--price-green: #42ff33;
-	--price-red: #ff4633;
-	--price-white: #fbfbfb;
+	--price-green: #00FF00;
+	--price-red: #E70006;
+	--price-white: white;
 }
 body {
 	font-family: sans-serif;
