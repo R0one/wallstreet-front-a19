@@ -12,8 +12,8 @@ const textWhite  = {
 class Prix extends React.Component {
 constructor (props){
 	super (props);
-	this.state = {evolution : 0, prix: 0};
-	//1 : augmentation, -1: diminution, 0: statique
+	this.state = {evolution : "const", prix: 0};
+	//"up" : augmentation, "down": diminution, "const": statique
 
 }
 getColorFromEvolution(evolution){
@@ -27,20 +27,20 @@ getColorFromEvolution(evolution){
 
 render(){
 	return(
-		<tr className="articleLine"><td className="article articleName">{this.props.nom}</td><td className="article articlePrice" style={this.getColorFromEvolution(this.state.evolution)}>{this.props.prix}</td></tr>);
+		<tr className="articleLine"><td className="article articleName">{this.props.nom}</td><td className="article articlePrice">{this.props.prix}</td><td><div className={"priceArrow priceArrow" + this.state.evolution}></div></td></tr>);
 }
 
 
 
 static getDerivedStateFromProps(nextProps, prevState){
 	if (nextProps.prix > prevState.prix){
-		return({evolution: 1, prix: nextProps.prix} );
+		return({evolution: "up", prix: nextProps.prix} );
 	}
 	else if (nextProps.prix < prevState.prix) {
-		return( {evolution: -1, prix: nextProps.prix} );
+		return( {evolution: "down", prix: nextProps.prix} );
 	}
 	else {
-		return( {evolution: 0} );
+		return( {evolution: "const"} );
 	}
 }
 

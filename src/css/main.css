@@ -45,3 +45,19 @@ td {
 	display: flex;
 	flex-direction: row;
 }
+.priceArrow {
+	width: 2em;
+	height: 2em;
+}
+.priceArrowup {
+	background: url("../../assets/arrow/up.png") no-repeat;
+	background-size: contain;
+}
+.priceArrowdown {
+	background: url("../../assets/arrow/down.png") no-repeat;
+	background-size: contain;
+}
+.priceArrowconst {
+	background: url("../../assets/arrow/const.png") no-repeat;
+	background-size: contain;
+}
