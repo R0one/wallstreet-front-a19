@@ -1,7 +1,6 @@
 'use strict';
 import { genRandomColor } from './utils/random_color.js';
-import {Prix} from './components/prix.js';
-
+import {ArticleList} from "./components/articleList.js";
 const styleBleu = {
 	color: 'white',
 	backgroundColor: 'blue',
@@ -32,7 +31,12 @@ clickMeButtonClicked() {
 render() {
 	return <div>
 		
-		<Prix nom = {"bière"} prix ={this.state.prix}  />
+		<ArticleList articles={
+		[
+			{name: "coucou-coulou", price: 0.65},
+			{name: "girafe bleue", price: 5.83}
+		]
+		}  />
 		<button type="button" onClick={() => {
 			this.clickMeButtonClicked();
 		}}>Click Me!</button>
