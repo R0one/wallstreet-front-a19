@@ -35,10 +35,13 @@ tr:nth-child(odd) {
 	background-color: black;
 }
 table {
-	width: 100%;
+	width: 50%;
 	border-spacing: 0px;
 }
 td {
 	padding: 0 0 0 0;
 }
-
+#main-div-child {
+	display: flex;
+	flex-direction: row;
+}

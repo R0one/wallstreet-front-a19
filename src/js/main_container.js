@@ -15,21 +15,10 @@ constructor(props) {
 				 };
 }
 
-clickMeButtonClicked() {
-	console.log("test");
-	this.setState((state, props) => {
-		return (
-			{
-				blue : 1-state.blue,
-				prix : -1
-			}
-		);
-	});	
-}
 
 
 render() {
-	return <div>
+	return <div id="main-div-child">
 		
 		<ArticleList articles={
 		[
@@ -38,9 +27,18 @@ render() {
 			{id: 3, name: "Gaufre à la vanille", price: 0.7}
 		]
 		}  />
-		<button type="button" onClick={() => {
-			this.clickMeButtonClicked();
-		}}>Click Me!</button>
+		<ArticleList articles={
+		[
+			{id: 1, name: "Sirop au chocolat", price: 0.82},
+			{id: 2, name: "Muffin fromage", price: 2.5},
+			{id: 3, name: "Flûte à bec", price: 9.9},
+			{id: 4, name: "Thé liégois", price: 0.2},
+			{id: 5, name: "Café irlandais", price: 300},
+			{id: 6, name: "Calva coréen", price: 0.01}
+
+		]
+		}  />
+
 		</div>;
 }
 
