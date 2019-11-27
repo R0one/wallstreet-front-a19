@@ -38,12 +38,20 @@ table {
 	width: 50%;
 	border-spacing: 0px;
 }
-td {
-	padding: 0 0 0 0;
+td.articleName {
+	padding-left: 0.8em;
+	/** protection contre les noms d'article longs **/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 5em;
 }
 #main-div-child {
 	display: flex;
 	flex-direction: row;
+	/** décalage image d'arrière-plan **/
+	position: relative;
+	top: 150px;
 }
 .priceArrow {
 	width: 2em;
