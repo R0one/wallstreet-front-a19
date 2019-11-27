@@ -36,6 +36,7 @@ tr:nth-child(odd) {
 }
 table {
 	width: 100%;
+	border-spacing: 0px;
 }
 td {
 	padding: 0 0 0 0;
