@@ -33,8 +33,9 @@ render() {
 		
 		<ArticleList articles={
 		[
-			{name: "coucou-coulou", price: 0.65},
-			{name: "girafe bleue", price: 5.83}
+			{name: "Coucou-Coulou", price: 0.65},
+			{name: "Girafe bleue", price: 5.83},
+			{name: "Gaufre à la vanille", price: 0.7}
 		]
 		}  />
 		<button type="button" onClick={() => {
