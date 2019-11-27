@@ -1,7 +1,7 @@
 'use strict';
 import { genRandomColor } from './utils/random_color.js';
-import {TextWithBackground} from './components/textWithBackground.js';
-import {PrixArticle} from './components/texts.js';
+import {Prix} from './components/prix.js';
+
 const styleBleu = {
 	color: 'white',
 	backgroundColor: 'blue',
@@ -10,24 +10,32 @@ const styleBleu = {
 class MainScreen extends React.Component {
 constructor(props) {
 	super(props);
-	this.state = { blue: false };
+	this.state = { 
+					blue: false,
+					prix: 2
+				 };
 }
 
 clickMeButtonClicked() {
 	console.log("test");
 	this.setState((state, props) => {
-		return {blue : 1-state.blue};
+		return (
+			{
+				blue : 1-state.blue,
+				prix : -1
+			}
+		);
 	});	
 }
 
 
 render() {
 	return <div>
-		<TextWithBackground text={this.state.blue ? "bleu" : "pas bleu"} backgroundColor={this.state.blue ? "blue" : genRandomColor()} />
+		
+		<Prix nom = {"bière"} prix ={this.state.prix}  />
 		<button type="button" onClick={() => {
 			this.clickMeButtonClicked();
 		}}>Click Me!</button>
-		<PrixArticle prix={5} />
 		</div>;
 }
 
