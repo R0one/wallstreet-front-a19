@@ -19,7 +19,6 @@ body {
 	margin: 0 0 0 0;
 }
 .article {
-	font-size: 3em;
 	font-variant: small-caps;
 }
 .articleName {
@@ -51,11 +50,7 @@ td.articleName {
 	flex-direction: row;
 	/** décalage image d'arrière-plan **/
 	position: relative;
-	top: 150px;
-}
-.priceArrow {
-	width: 2em;
-	height: 2em;
+	top: 200px;
 }
 .priceArrowup {
 	background: url("../../assets/arrow/up.png") no-repeat;

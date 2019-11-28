@@ -27,7 +27,7 @@ getColorFromEvolution(evolution){
 
 render(){
 	return(
-		<tr className="articleLine"><td className="article articleName">{this.props.nom}</td><td className="article articlePrice">{this.props.prix}</td><td><div className={"priceArrow priceArrow" + this.state.evolution}></div></td></tr>);
+		<tr className="articleLine" style={{fontSize: this.props.magicalSize + "px"}}><td className="article articleName">{this.props.nom}</td><td className="article articlePrice">{this.props.prix}</td><td><div style={{height: this.props.magicalSize + 2 + "px", width: this.props.magicalSize + 2 + "px"}} className={"priceArrow priceArrow" + this.state.evolution}></div></td></tr>);
 }
 
 
