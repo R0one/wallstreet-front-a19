@@ -1,6 +1,6 @@
 'use strict';
-import { genRandomColor } from './utils/random_color.js';
 import {ArticleList} from "./components/ArticleList.js";
+import {networkRoutine} from "./network.js";
 
 /*const bieres = 	[
 			{id: 2, name: "Anosteke Blonde", price: 1.65},
@@ -35,6 +35,11 @@ class MainScreen extends React.Component {
 constructor(props) {
 	super(props);
 	this.state = { bieres: bieres, softsChelous: softsChelous};
+	networkRoutine(this.beaujolaisNouveau);
+}
+beaujolaisNouveau(data) {
+	//what should I do when new data est arrivé?
+	console.log(data);
 }
 getMagicalLineHeightByNumberOfArticles(i) {
 	if(i == 0) {return 10;}
