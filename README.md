@@ -5,6 +5,8 @@ Ca va etre louuuuurd.
 ## Setup your env
 No server, full web frontend with only react.
 However, we use JSX because typing `React.createElement("div", {` is sooo annoying. So we have to compile JSX into standard JS using babel.
+Morover, the toolchain has been configured for transpiling ES6 modules into <2015 JS with browserify, just in case the télé du pic is too old.
+
 The babel toolchain is entirely managed by npm, so you just have to:
 ```
 npm install
