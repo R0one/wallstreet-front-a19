@@ -3,8 +3,14 @@ const refreshDelay = 30; //seconds
 function networkRoutine(callback, component) {
 	fetch(request)
 	.then((response) => {
-		//parse the JSON and pass the JS object to the caller
-		response.json().then((data) => {callback(false,data,component);})
+		if(!response.ok) {callback(true);}
+		else {
+			//parse the JSON and pass the JS object to the caller
+			response.json().then((data) => {callback(false,data,component);})
+		}
+	})
+	.catch( (e) => {callback(true);})
+	.finally( () => {
 		//wait and do it again
 		setTimeout(function(){
 			networkRoutine(callback,component);
