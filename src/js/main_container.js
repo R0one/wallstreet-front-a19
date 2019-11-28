@@ -1,6 +1,6 @@
 'use strict';
 import { genRandomColor } from './utils/random_color.js';
-import {ArticleList} from "./components/articleList.js";
+import {ArticleList} from "./components/ArticleList.js";
 
 /*const bieres = 	[
 			{id: 2, name: "Anosteke Blonde", price: 1.65},
