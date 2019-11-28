@@ -16,3 +16,9 @@ npm installs some JS and binary modules into `node_modules`.
 npm run build
 ```
 The code inside `src/` is compiled and put into `lib`. It can then be served on the international world wide web of earth.
+
+## Credits
+Code by Romain Maliach-Auguste and Victor Tondolo.
+Graphics by Baptiste Faucher.
+Alarm icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
+

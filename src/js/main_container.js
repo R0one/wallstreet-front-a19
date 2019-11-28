@@ -1,5 +1,6 @@
 'use strict';
 import {ArticleList} from "./components/ArticleList.js";
+import {Alarm} from "./components/Alarm.js";
 import {networkRoutine} from "./network.js";
 
 /*const bieres = 	[
@@ -34,31 +35,34 @@ const softsChelous = 	[
 class MainScreen extends React.Component {
 constructor(props) {
 	super(props);
-	this.state = { bouteilles: bieres, pressions: softsChelous};
+	this.state = { bouteilles: bieres, pressions: softsChelous, error: false, errorData: {message: "ok"}};
 	networkRoutine(this.beaujolaisNouveau, this);
 }
 beaujolaisNouveau(error,data,component) {
 	//what should I do when new data est arrivé?
-	if(error) {return;} //we'll do fancy things later
+	if(error) {
+		console.log(data);
+		var b;
+		//trick for converting non-typeerror errors into typeerrors
+		if(data instanceof TypeError) { b = data;} else { b = new TypeError("Unknown error : " + JSON.stringify(data)); }
+		component.setState((state,props)=>{return({error:true,errorData:b});});
+	return;}
 	let bouteilles = data.filter( (biere) => biere.categorie_id == 10);
 	let pressions = data.filter( (biere) => biere.categorie_id == 11);
-	console.log("bouteilles:");
-	console.log(bouteilles);
-	component.setState( (prevState, prevProps) => {return({bouteilles: bouteilles, pressions: pressions});});
+	component.setState( (prevState, prevProps) => {return({bouteilles: bouteilles, pressions: pressions, error:false});});
 }
 getMagicalLineHeightByNumberOfArticles(i) {
 	if(i == 0) {return 10;}
 	//un peu de maths vaudoues (#mt12):
 	//1080px - 200px pour le logo et sa marge : il reste 880px à se partager entre les i lignes. On enlève ensuite 20px pour la marge dans la ligne.
 	//Et on met un seuil à 100px parce qu'après c'est juste trop gros.
-	console.log(i);
 	return Math.min(100,(880/i - 20));
 }
 //cette taille sera calculée en fonction de l'état et passée de composant en composant. C'est sale mais il n'y a pas de solution CSS. Et puis c'est bien une cascade.
 
 render() {
 	return <div id="main-div-child"> 
-		
+		<Alarm visible={this.state.error} text={this.state.errorData.message} />
 		<ArticleList magicalSize={this.getMagicalLineHeightByNumberOfArticles(Math.max(this.state.bouteilles.length, this.state.pressions.length))} articles={this.state.bouteilles }  />
 		<ArticleList magicalSize={this.getMagicalLineHeightByNumberOfArticles(Math.max(this.state.bouteilles.length, this.state.pressions.length))} articles={this.state.pressions }  />
 

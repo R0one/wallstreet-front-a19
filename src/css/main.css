@@ -64,3 +64,21 @@ td.articleName {
 	background: url("../../assets/arrow/const.png") no-repeat;
 	background-size: contain;
 }
+.alarm {
+	position: fixed;
+	top: 1px;
+	right: 10px;
+	background: url("../../assets/alarm.svg") no-repeat;
+	background-size: auto 60px;
+	background-position: top right;
+	padding-top: 65px;
+	font-size: 30px;
+	text-align: right;
+	/** protection contre les noms d'erreur longs avec retour à la ligne**/
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 300px;
+
+
+}
