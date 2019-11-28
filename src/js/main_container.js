@@ -34,12 +34,17 @@ const softsChelous = 	[
 class MainScreen extends React.Component {
 constructor(props) {
 	super(props);
-	this.state = { bieres: bieres, softsChelous: softsChelous};
-	networkRoutine(this.beaujolaisNouveau);
+	this.state = { bouteilles: bieres, pressions: softsChelous};
+	networkRoutine(this.beaujolaisNouveau, this);
 }
-beaujolaisNouveau(data) {
+beaujolaisNouveau(error,data,component) {
 	//what should I do when new data est arrivé?
-	console.log(data);
+	if(error) {return;} //we'll do fancy things later
+	let bouteilles = data.filter( (biere) => biere.categorie_id == 10);
+	let pressions = data.filter( (biere) => biere.categorie_id == 11);
+	console.log("bouteilles:");
+	console.log(bouteilles);
+	component.setState( (prevState, prevProps) => {return({bouteilles: bouteilles, pressions: pressions});});
 }
 getMagicalLineHeightByNumberOfArticles(i) {
 	if(i == 0) {return 10;}
@@ -54,8 +59,8 @@ getMagicalLineHeightByNumberOfArticles(i) {
 render() {
 	return <div id="main-div-child"> 
 		
-		<ArticleList magicalSize={this.getMagicalLineHeightByNumberOfArticles(Math.max(this.state.bieres.length, this.state.softsChelous.length))} articles={bieres }  />
-		<ArticleList magicalSize={this.getMagicalLineHeightByNumberOfArticles(Math.max(this.state.bieres.length, this.state.softsChelous.length))} articles={softsChelous}  />
+		<ArticleList magicalSize={this.getMagicalLineHeightByNumberOfArticles(Math.max(this.state.bouteilles.length, this.state.pressions.length))} articles={this.state.bouteilles }  />
+		<ArticleList magicalSize={this.getMagicalLineHeightByNumberOfArticles(Math.max(this.state.bouteilles.length, this.state.pressions.length))} articles={this.state.pressions }  />
 
 		</div>;
 }
