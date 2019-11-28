@@ -55,8 +55,8 @@ getMagicalLineHeightByNumberOfArticles(i) {
 	if(i == 0) {return 10;}
 	//un peu de maths vaudoues (#mt12):
 	//1080px - 200px pour le logo et sa marge : il reste 880px à se partager entre les i lignes. On enlève ensuite 20px pour la marge dans la ligne.
-	//Et on met un seuil à 100px parce qu'après c'est juste trop gros.
-	return Math.min(100,(880/i - 20));
+	//Et on met un seuil à 70px parce qu'après c'est juste trop gros.
+	return Math.min(70,(880/i - 20));
 }
 //cette taille sera calculée en fonction de l'état et passée de composant en composant. C'est sale mais il n'y a pas de solution CSS. Et puis c'est bien une cascade.
 
