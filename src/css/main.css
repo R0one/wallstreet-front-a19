@@ -43,7 +43,7 @@ td.articleName {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 5em;
+	max-width: 3em;
 }
 #main-div-child {
 	display: flex;
