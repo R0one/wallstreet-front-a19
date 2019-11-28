@@ -4,8 +4,7 @@
   "description": "Front de la perm Wallstreet A19.",
   "main": "index.html",
   "scripts": {
-    "build": "mkdir -p ./.temp-build && mkdir -p ./lib/js && babel src -d .temp-build && ./node_modules/browserify/bin/cmd.js ./.temp-build/js/main_container.js > ./lib/js/bundle.js",
-    "serve": "node_modules/http-server/bin/http-server --cors ./"
+    "build": "mkdir -p ./.temp-build && mkdir -p ./lib/js && babel src -d .temp-build && ./node_modules/browserify/bin/cmd.js ./.temp-build/js/main_container.js > ./lib/js/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,7 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "http-server": "^0.11.1"
+    "browserify": "^16.5.0"
   },
   "dependencies": {}
 }
