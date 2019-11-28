@@ -25,3 +25,5 @@ Graphics by Baptiste Faucher.
 Alarm icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
 
 Backend and unicorns in César Richard.
+
+Seemingly we do have a CI.
