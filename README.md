@@ -1,8 +1,6 @@
 # wallstreet-front-a19
 Front de la perm Wallstreet A19.
 Ca va etre louuuuurd.
-## Backend
-[https://github.com/cesar-richard/wallstreet](cesar-richard/wallstreet)
 
 ## Setup your env
 No server, full web frontend with only react.
@@ -21,4 +19,4 @@ The code inside `src/` is compiled and put into `lib`. It can then be served on 
 Code by Romain Maliach-Auguste and Victor Tondolo.
 Graphics by Baptiste Faucher.
 Alarm icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
-
+Backend and unicorns in César Richard.
