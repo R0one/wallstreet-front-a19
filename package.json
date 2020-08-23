@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/CdRom1/wallstreet-front-a19#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.4",
-    "@babel/preset-react": "^7.7.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "browserify": "^16.5.0"
+    "browserify": "^16.5.2"
   },
   "dependencies": {}
 }
